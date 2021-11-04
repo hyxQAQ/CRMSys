@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 订单业务管理 -->
+    <package name="orders-manage" namespace="/pages" extends="struts-default">
+		<!-- 查看订单信息 -->
+        <action name="orders-findOrders" class="OrdersAction" method="findOrders">
+            <result >/pages/~cust/cust/orders.jsp</result>
+        </action>
+        <!-- 查看订单明细信息 -->
+        <action name="orders-queryOrders" class="OrdersAction" method="queryOrders" >
+        	<result>/pages/~cust/cust/orders_detail.jsp</result>
+        </action>
+    </package>
+
+
+</struts>

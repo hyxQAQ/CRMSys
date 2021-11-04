@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-26 18:56:27 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.ClientConsist" table="CLIENTCONSIST">
+        <id name="rkId" type="int">
+            <column name="RKID" />
+            <generator class="assigned" />
+        </id>
+        <property name="rkName" type="java.lang.String">
+            <column name="RKNAME" />
+        </property>
+        <property name="num" type="int">
+            <column name="NUM" />
+        </property>
+    </class>
+</hibernate-mapping>

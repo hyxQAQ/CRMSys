@@ -1,0 +1,50 @@
+/* bass css */
+body { font:12px/1.8 "ËÎÌå", Arial, Helvetica, sans-serif; color:#464545; background-color:#fff }
+.spr,.hh_tab li.on{ display:block; background:url(spr.png) no-repeat}
+.hh1_tab li.on{ display:block; background:url(spr.png) no-repeat}
+.warrper { width:980px; }
+.m_auto{margin:0 auto}
+#wel_bg { background-image: url(../images/login/user_all_bg.gif);}
+/*lunbo*/
+#container { margin-top: 100px;}
+.game_pic_tab{ height:260px; padding:8px 0; overflow:hidden; position:relative; background:url(pic_tab_130219.jpg) no-repeat 2px top;}
+.game_pic{position:relative;width:603px;height:248px;overflow: hidden;}
+.game_pic_tab .active{filter:alpha(opacity=100); -moz-opacity:1;opacity: 1; }
+.game_pic_icon{overflow:hidden;display:block; width:60px; height:63px; position:absolute; text-indent:9999em; top:0px; z-index:9999}
+.game_pic_icon_l{ left:0px; background:url(tab_iconrrr.png) no-repeat 140px 100px; z-index:4; padding:100px 0 100px 140px;}
+.game_pic_icon_r{ left:780px; background:url(tab_iconlll.png) no-repeat 0 100px; z-index:4; padding:100px 140px 100px 0;}
+.info-wrapper{ z-index:5}
+.prev_l,.next_r{top:8px; width:188px;height: 248px; background:url(background_stripes.gif) repeat 0 0; z-index:3; position:absolute;}
+.prev_l{ left:0}
+.next_r{ right:0}
+
+.title_0216{ height:34px; line-height:34px; border-bottom:2px #e4e4e4 solid}
+.title_0216_tab li{ float:left; margin:0 15px; padding:0 2px; color:#707070; font-size:14px; cursor:pointer}
+.title_0216_tab li.on{ color:#01bbe8; font-weight:bold; border-bottom:2px #01bbe8 solid}
+.title_0216_more{ font-size:14px; padding-right:10px;}
+.r_title_0216{}
+.con_694{ padding:10px; width:670px;}
+a.btn_121210{ text-indent:-9999em;}
+.list_694 li{ float:left; width:95px; padding:12px; margin:0 7px; height:120px; overflow:hidden; position:relative; }
+.list_694 li.on,.w_483_list li.on{ background-color:#e4e3e3}
+.list_694 li img{ display:block; width:80px; height:80px; margin:0 auto}
+.list_694 li h4 a{ font-size:14px; color:#333; display:block; height:20px; line-height:20px; overflow:hidden; margin:5px 0 -3px 0; padding-left:5px}
+.list_694 li span a{ color:#707070; padding-left:5px}
+a.btn_130220{ background-color:#01bbe8; color:#fff; width:80px; height:24px; line-height:24px; display:block;text-decoration:none; text-align:center}
+.list_694 li a.btn_130220{  margin:5px auto }
+.list_694 li i{ display:block; width:80px; height:81px;background:url(80x80.png) no-repeat 0 0; _background:url(80x80ie6.png) no-repeat 0 0; position:absolute; left:19px; left:20px\0; }
+
+.rank_130217{ padding:15px;}
+.rank_130217_list li{ border-bottom:1px #c8c8c8 dotted; position:relative; padding:2px 0 2px 30px; *padding:0 0 1px 30px;overflow:hidden; zoom:1}
+.rank_130217_line{   height:32px; line-height:32px;}
+.rank_130217_line h4{ float:left; font-weight:400; width:200px; }
+.rank_130217_line span{ float:right; color:#00a9d1}
+.rank_130217_list li.rank_130217_top1{ padding:10px 0 10px 30px;}
+.rank_130217_top1 h4{ height:24px; line-height:24px; overflow:hidden}
+.rank_130217_top1 p{ padding:2px 0}
+.rank_130217_top1 .btn_blue{ float:left}
+.rank_130217_top1 img{ display:block; float:left; width:80px; height:80px; margin:0 10px 0 0}
+.rank_130217_num1,.rank_130217_line em { position:absolute; left:0; top:0; display:block; color:#fff; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAuCAYAAAA/SqkPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAZpJREFUeNpi/P//P8OcOXNEGBgYhIEYmUYXIwW8BeI3SDQy+21KSsobRpDFWMF0xv8MVAC3XW4xqKqqMqKLMzHQGDAyMmIVp7nFuMDwtRgYv6qjQT1q8ajFoxYPDovffmXY8O0XwyW6WQysRX9fe85QL1LKUKrRyOD57CNDF0iMphb/+cfwcu0FhmjtZoalQO7rx+8ZnklXMpQfucvg+OsPwz2aWAwM1jMFqxkCQ2cznAZynwLxR5icXR/D0QUnGIxefWaYTVWLn39kWGjQxhA39SDDYyAXhH+gq0lfxvBRvJwh/fxjBn+g759QZDEw7n6cfcRQKlXJ0HL7FcNrqE//4tNi1M6waeYRBqN3XxnWEEgs/7HjaQwP58cx+AKVKAMxLzkJ93odQwKQVsFmPj6LhYCaFICYncIsy43NfJytTGgjjZlA0BKZBTHtwN28HS0yh4vFLPh6AAcPHqQoAdjb2+NOvLgkDh06RJVUZ2dnxzgax6MWj1o8avGoxaMWU8diYJUWSqnh+Mwg1NgLodDuNSTXx7QGAAEGAFcG07dc9LbiAAAAAElFTkSuQmCC) no-repeat 0 0;*background:url(rank_icon_120218.jpg) no-repeat 0 0;}
+.rank_130217_num1{ height:22px; line-height:18px; width:30px; text-align:center; left:-5px;}
+.rank_130217_line em{top:8px; width:18px; height:18px; line-height:18px; text-align:center; background-position:-6px -28px; }
+.rank_130217_line_top3 em{ height:22px; line-height:18px; width:30px; text-align:center; background-position:0 0;left:-5px;}

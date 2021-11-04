@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-20 14:23:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.ClientActivity" table="CLIENTACTIVITY">
+        <id name="atvId" type="int">
+            <column name="ATVID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="clientManage" class="com.crm.entity.ClientManage" fetch="join">
+            <column name="CLIENTMANAGE" />
+        </many-to-one>
+        <property name="atvTime" type="java.util.Date">
+            <column name="ATVTIME" />
+        </property>
+        <property name="atvPlace" type="java.lang.String">
+            <column name="ATVPLACE" />
+        </property>
+        <property name="atvTitle" type="java.lang.String">
+            <column name="ATVTITLE" />
+        </property>
+        <property name="atvComment" type="java.lang.String">
+            <column name="ATVCOMMENT" />
+        </property>
+        <property name="atvDesc" type="java.lang.String">
+            <column name="ATVDESC" />
+        </property>
+    </class>
+</hibernate-mapping>

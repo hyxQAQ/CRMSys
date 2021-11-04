@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <!-- 客户计划业务管理 -->
+  	<package name="clientPlan-manage" namespace="/pages" extends="struts-default">
+  		<!-- 查询信息的Action  -->
+  		<action name="cPlan-doSearch" class="ClientPlanAction" method="doSearch">
+  			<result>/pages/~sale/dev.jsp</result>
+  		</action>
+  		<!-- 根据id得到客户开发计划 -->
+  		<action name="cPlan-doGetClientPlan" class="ClientPlanAction" method="doGetClientPlan">
+  			<result>/pages/~sale/dev_plan.jsp</result>
+  		</action>
+  		<!-- 点击查询按钮根据id得到客户开发计划 -->
+  		<action name="cPlan-doGetChaKanClientPlan" class="ClientPlanAction" method="doGetChaKanClientPlan">
+  			<result >/pages/~sale/dev_detail.jsp</result>
+  		</action>
+  		<!-- 根据计划项删除计划项、时间和满意度 -->
+  		<action name="cPlan-delPlatodo" class="ClientPlanAction" method="delPlatodo">
+  			<!-- <result type="stream" name="ajax-success">
+  				<param name="contentType">text/html</param>
+  				<param name="inputName">inputStream</param>
+  			</result> -->
+  			<result type="chain">cPlan-doGetClientPlan</result>
+  		</action>
+  		<!-- 根据id添加计划项，时间和满意度 -->
+  		<action name="cPlan-addPlantodo" class="ClientPlanAction" method="addPlatodo">
+  			<result type="chain">cPlan-doGetClientPlan</result>
+  		</action>
+  			<!-- 根据点击执行计划跳转 -->
+ 		<action name="cPlan-executePlan" class="ClientPlanAction" method="executePlan">
+  			<result>/pages/~sale/dev_execute.jsp</result>
+  		</action> 
+  		 <!-- 根据点击保存保存数据库 -->
+ 		<action name="cPlan-savePlan" class="ClientPlanAction" method="savePlan">
+  			<result type="stream" name="ajax-success">
+  				<param name="contentType">text/html</param>
+            	<param name="inputName">inputStream</param>
+  			</result>
+  		</action> 
+  		 <!-- 根据点击开发失败回显信息列表 -->
+ 		<action name="cPlan-lostPlan" class="ClientPlanAction" method="lostPlan">
+  			<result type="redirectAction">cPlan-doSearch</result>
+  		</action> 
+  		 <!-- 根据点击开发成功回显信息列表 -->
+ 		<action name="cPlan-winPlan" class="ClientPlanAction" method="winPlan">
+  			<result type="redirectAction">cPlan-doSearch</result>
+  		</action> 
+  	</package>
+
+</struts>

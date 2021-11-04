@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <!-- 地区业务管理 -->
+    <package name="district-manage" namespace="/pages" extends="struts-default">
+		<!-- 分页查询的action -->
+        <action name="district-doSearch" class="DistrictAction" method="doSearch">
+            <result>/pages/~basd/dist.jsp</result>
+        </action>
+        <!-- 删除地区信息 -->
+        <action name="district-delete" class="DistrictAction" method="delete">
+           <result type="stream" >
+        		<param name="contentType">text/html</param>
+            	<param name="inputName">inputStream</param>
+        	</result>
+        </action>
+        <!-- 添加地区信息 -->
+        <action name="district-add" class="DistrictAction" method="add">
+            <result type="redirectAction">district-doSearch</result>
+        </action>
+        <!-- 编辑地区回显信息-->
+        <action name="district-update" class="DistrictAction" method="update">
+            <result >/pages/~basd/dist_edit.jsp</result>
+        </action>
+        <!-- 保存地区信息-->
+        <action name="district-doUpdate" class="DistrictAction" method="doUpdate">
+           <result type="redirectAction">district-doSearch</result>
+        </action>
+    </package>
+
+
+</struts>

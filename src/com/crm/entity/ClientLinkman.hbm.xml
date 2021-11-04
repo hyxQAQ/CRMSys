@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-21 23:13:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.ClientLinkman" table="CLIENTLINKMAN">
+        <id name="lkmId" type="int">
+            <column name="LKMID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="clientManage" class="com.crm.entity.ClientManage" fetch="join">
+            <column name="CLIENTMANAGE" />
+        </many-to-one>
+        <property name="lkmName" type="java.lang.String">
+            <column name="LKMNAME" />
+        </property>
+        <property name="lkmSex" type="java.lang.String">
+            <column name="LKMSEX" />
+        </property>
+        <property name="lkmPostion" type="java.lang.String">
+            <column name="LKMPOSTION" />
+        </property>
+        <property name="lkmTel" type="java.lang.String">
+            <column name="LKMTEL" />
+        </property>
+        <property name="lkmMobile" type="java.lang.String">
+            <column name="LKMMOBILE" />
+        </property>
+        <property name="lkmComment" type="java.lang.String">
+            <column name="LKMCOMMENT" />
+        </property>
+    </class>
+</hibernate-mapping>

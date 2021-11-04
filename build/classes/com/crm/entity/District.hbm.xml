@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-20 14:23:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.District" table="DISTRICT">
+        <id name="dsId" type="int">
+            <column name="DSID" />
+            <generator class="native" />
+        </id>
+        <property name="dsName" type="java.lang.String">
+            <column name="DSNAME" />
+        </property>
+    </class>
+</hibernate-mapping>

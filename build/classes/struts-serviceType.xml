@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<!-- 服务类型业务管理 -->
+    <package name="serviceType-manage" namespace="/pages" extends="struts-default">
+		<!-- 查询服务类型的action -->
+        <action name="sType-doSearch" class="ServiceTypeAction" method="doSearch">
+            <result >/pages/~basd/serv_type.jsp</result>
+        </action>
+         <!-- 添加服务类型 -->
+        <action name="sType-add" class="ServiceTypeAction" method="add">
+            <result type="redirectAction">sType-doSearch</result>
+        </action>
+        <!-- 得到服务类型 -->
+        <action name="sType-doUpdate" class="ServiceTypeAction" method="doUpdate">
+            <result>/pages/~basd/serv_type_edit.jsp</result>
+        </action>
+        <!-- 修改服务类型 -->
+        <action name="sType-update" class="ServiceTypeAction" method="update">
+           <result type="redirectAction">sType-doSearch</result>
+        </action>
+         <!-- 删除服务类型 -->
+        <action name="sType-delet" class="ServiceTypeAction" method="delet">
+        	<result type="stream">
+        		<param name="contenType">text/html</param>
+        		<param name="inputName">inputStream</param>
+        	</result>
+        </action>
+    </package>
+
+
+</struts>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-26 19:31:23 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.ServiceClient" table="SERVICECLIENT">
+        <id name="stId" type="int">
+            <column name="STID" />
+            <generator class="assigned" />
+        </id>
+        <property name="stName" type="java.lang.String">
+            <column name="STNAME" />
+        </property>
+        <property name="num" type="int">
+            <column name="NUM" />
+        </property>
+    </class>
+</hibernate-mapping>

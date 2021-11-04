@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<!-- 客户流失业务管理 -->
+    <package name="clientLost-manage" namespace="/pages" extends="struts-default">  
+    
+    	<!-- 客户流失的查询 -->
+        <action name="cLost-doSearch" class="ClientLostAction" method="doSearch">
+            <result>/pages/~cust/lost/list.jsp</result>
+        </action>
+        
+        <!-- 查询已流失的客户 -->
+        <action name="cLost-findLostClient" class="ClientLostAction" method="findLostClient">
+        	<result>/pages/~rept/lost.jsp</result>
+        </action>
+        
+        <!-- 跳转暂缓流失页面 -->
+		<action name="cLost-dogetVal" class="ClientLostAction" method="dogetVal">
+			<result>/pages/~cust/lost/relay.jsp</result>
+		</action>
+		<!-- 暂缓流失，点击保存，保存成功返回到客户流失列表页面 -->
+		<action name="cLost-saveVal" class="ClientLostAction" method="saveVal">
+			<result type="redirectAction">cLost-doSearch</result>
+		</action>
+		<!-- 确认流失，点击保存，保存成功返回到客户流失列表页面 -->
+		<action name="cLost-saveVals" class="ClientLostAction" method="saveVals">
+			<result type="redirectAction">cLost-doSearch</result>
+		</action>
+		<!-- 跳转到确认流失页面 -->
+		<action name="cLost-dogetVals" class="ClientLostAction" method="dogetVals">
+			<result>/pages/~cust/lost/confirm.jsp</result>
+		</action>
+    </package>
+
+</struts>

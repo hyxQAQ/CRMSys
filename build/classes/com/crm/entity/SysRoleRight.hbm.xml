@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-20 14:23:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.SysRoleRight" table="SYSROLERIGHT">
+        <id name="rfId" type="int">
+            <column name="RFID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="sysRole" class="com.crm.entity.SysRole" fetch="join">
+            <column name="SYSROLE" />
+        </many-to-one>
+        <many-to-one name="sysRight" class="com.crm.entity.SysRight" fetch="join">
+            <column name="SYSRIGHT" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

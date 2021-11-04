@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+  	<!-- 客户服务业务管理 -->
+    <package name="clientService-manage" namespace="/pages" extends="jfreechart-default">
+
+       <!-- 客户服务查询Action -->
+        <action name="cService-doSearch" class="ClientServiceAction" method="doSearch">
+            <!-- 分配 -->
+            <result name="dispatch">/pages/~cust/service/dispatch.jsp</result>
+          	<!-- 处理 -->
+          	<result name="deal">/pages/~cust/service/deal.jsp</result>
+          	<!-- 反馈 -->
+          	<result name="feedback">/pages/~cust/service/feedback.jsp</result>
+          	<!-- 已归档 -->
+          	<result name="success">/pages/~cust/service/arch.jsp</result>
+        </action>
+        <!-- 服务创建查询数据库 -->
+		<action name="cService-add" class="ClientServiceAction" method="add">
+        	<result >/pages/~cust/service/add.jsp</result>
+        </action>
+        <!-- 服务创建保存数据库 -->
+ 		<action name="cService-doAdd" class="ClientServiceAction" method="doAdd">
+ 			<result type="redirectAction" >cService-doSearch?status=1&amp;jump=1</result>	
+ 		</action> 
+ 		<!-- 服务分配 -->
+         <action name="cService-dispatchSet" class="ClientServiceAction" method="dispatchSet">
+            <result type="redirectAction" >cService-doSearch?status=1</result>
+         </action>
+ 		<!-- 删除客户分配信息 -->
+  		<action name="cService-delete" class="ClientServiceAction" method="delete">
+        	<result type="stream" name="ajax-success">
+        		<param name="contentType">text/html</param>
+            	<param name="inputName">inputStream</param>
+        	</result>
+        </action>	
+          <!-- 客户服务处理Action -->
+        <action name="cService-doDeal" class="ClientServiceAction" method="doDeal">
+            <result>/pages/~cust/service/deal_detail.jsp</result>
+        </action>
+        <!-- 客户服务保存处理Action -->
+        <action name="cService-doDealDetail" class="ClientServiceAction" method="doDealDetail">
+            <result type="redirectAction">cService-doSearch?status=2</result>
+        </action>
+         <!-- 客户服务反馈Action -->
+        <action name="cService-doFeedBack" class="ClientServiceAction" method="doFeedBack">
+            <result>/pages/~cust/service/feedback_detail.jsp</result>
+        </action>
+        <!-- 客户服务保存反馈Action -->
+        <action name="cService-doFeedBackDetail" class="ClientServiceAction" method="doFeedBackDetail">
+            <result  type="redirectAction">cService-doSearch?status=3</result>
+        </action>
+         <!-- 客户服务归档Action -->
+        <action name="cService-doArch" class="ClientServiceAction" method="doArch">
+            <result>/pages/~cust/service/detail.jsp</result>
+        </action>
+        <action name="cService-QueryServiceClient" class="ClientServiceAction" method="QueryServiceClient">
+        	<result>/pages/~rept/serv.jsp</result>
+        </action>
+        <!-- 生成客户服务统计图的action -->
+        <action name="cService-chartServiceClient" class="ClientServiceAction">
+            <result type="chart">
+                <param name="width">600</param>
+                <param name="height">450</param>
+            </result>
+        </action>
+        <!-- 下载客户服务以excel格式的action -->
+        <action name="cService-downloadExcel" class="ClientServiceAction" method="downloadExcel">
+        	<result name="excel" type="stream">  
+                <param name="contentType">application/vnd.ms-excel</param>  
+                <param name="contentDisposition">attachment;filename="cService.xls"</param>  
+                <param name="inputName">excelStream</param>  
+                <param name="bufferSize">1024</param>  
+            </result>  
+        </action>
+        <action name="cService-downloadPdf" class="ClientServiceAction" method="downloadPdf">
+        	<result name="pdf" type="stream">
+        		<param name="contentType">application/pdf; charset=utf-8</param>
+				<param name="inputName">pdfStream</param>
+				<param name="contentDisposition">attachment; filename="cService.pdf"</param>
+        		<param name="bufferSize">1024</param>  
+        	</result>
+        </action>
+    </package>
+
+</struts>

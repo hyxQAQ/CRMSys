@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-20 14:23:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.SysRole" table="SYSROLE">
+        <id name="roleId" type="int">
+            <column name="ROLEID" />
+            <generator class="native" />
+        </id>
+        <property name="roleName" type="java.lang.String">
+            <column name="ROLENAME" />
+        </property>
+        <property name="roleDesc" type="java.lang.String">
+            <column name="ROLEDESC" />
+        </property>
+        <property name="roleFlag" type="int">
+            <column name="ROLEFLAG" />
+        </property>
+    </class>
+</hibernate-mapping>

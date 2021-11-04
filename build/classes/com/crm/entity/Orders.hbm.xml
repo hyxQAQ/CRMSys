@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-22 19:21:48 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.Orders" table="ORDERS">
+        <id name="odrId" type="int">
+            <column name="ODRID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="clientManage" class="com.crm.entity.ClientManage" fetch="join">
+            <column name="CLIENTMANAGE" />
+        </many-to-one>
+        <property name="odrDate" type="java.util.Date">
+            <column name="ODRDATE" />
+        </property>
+        <property name="odrAddr" type="java.lang.String">
+            <column name="ODRADDR" />
+        </property>
+        <property name="odrStatus" type="java.lang.String">
+            <column name="ODRSTATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

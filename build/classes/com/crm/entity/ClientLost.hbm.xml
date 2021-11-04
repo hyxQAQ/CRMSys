@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-23 8:50:35 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.ClientLost" table="CLIENTLOST">
+        <id name="lstId" type="int">
+            <column name="LSTID" />
+            <generator class="native" />
+        </id>
+        <property name="lstName" type="java.lang.String">
+            <column name="LSTNAME" />
+        </property>
+        <many-to-one name="sysUser" class="com.crm.entity.SysUser" fetch="join">
+            <column name="SYSUSER" />
+        </many-to-one>
+        <property name="lstLastOrderDate" type="java.util.Date">
+            <column name="LSTLASTORDERDATE" />
+        </property>
+        <property name="lstLostDate" type="java.util.Date">
+            <column name="LSTLOSTDATE" />
+        </property>
+        <property name="lstDelay" type="java.lang.String">
+            <column name="LSTDELAY" />
+        </property>
+        <property name="lstAddDelay" type="java.lang.String">
+            <column name="LSTADDDELAY" />
+        </property>
+        <property name="lstReason" type="java.lang.String">
+            <column name="LSTREASON" />
+        </property>
+        <property name="lstStatus" type="java.lang.String">
+            <column name="LSTSTATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

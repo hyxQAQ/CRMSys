@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-25 23:02:24 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.ClientService" table="CLIENTSERVICE">
+        <id name="svrId" type="int">
+            <column name="SVRID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="svrType" class="com.crm.entity.ServiceType" fetch="join">
+            <column name="SVRTYPE" />
+        </many-to-one>
+        <property name="svrTitle" type="java.lang.String">
+            <column name="SVRTITLE" />
+        </property>
+        <property name="svtNmae" type="java.lang.String">
+            <column name="SVTNMAE" />
+        </property>
+        <property name="svrStatus" type="int">
+            <column name="SVRSTATUS" />
+        </property>
+        <property name="svrRequest" type="java.lang.String">
+            <column name="SVRREQUEST" />
+        </property>
+        <property name="svrCreateName" type="java.lang.String">
+            <column name="SVRCREATENAME" />
+        </property>
+        <property name="svrCreateDate" type="java.util.Date">
+            <column name="SVRCREATEDATE" />
+        </property>
+        <many-to-one name="sysUser" class="com.crm.entity.SysUser" fetch="join">
+            <column name="SYSUSER" />
+        </many-to-one>
+        <property name="svrDueDate" type="java.util.Date">
+            <column name="SVRDUEDATE" />
+        </property>
+        <many-to-one name="sysRole" class="com.crm.entity.SysRole" fetch="join">
+            <column name="SYSROLE" />
+        </many-to-one>
+        <property name="svrDealDate" type="java.util.Date">
+            <column name="SVRDEALDATE" />
+        </property>
+        <property name="svrResult" type="java.lang.String">
+            <column name="SVRRESULT" />
+        </property>
+        <property name="svrStisfy" type="int">
+            <column name="SVRSTISFY" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-20 14:23:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.ClientPlan" table="CLIENTPLAN">
+        <id name="plaId" type="int">
+            <column name="PLAID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="marketChance" class="com.crm.entity.MarketChance" fetch="join">
+            <column name="MARKETCHANCE" />
+        </many-to-one>
+        <property name="plaDate" type="java.util.Date">
+            <column name="PLADATE" />
+        </property>
+        <property name="plaTodo" type="java.lang.String">
+            <column name="PLATODO" />
+        </property>
+        <property name="plaResult" type="java.lang.String">
+            <column name="PLARESULT" />
+        </property>
+    </class>
+</hibernate-mapping>

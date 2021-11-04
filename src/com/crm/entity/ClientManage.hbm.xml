@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-21 23:12:03 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.ClientManage" table="CLIENTMANAGE">
+        <id name="manId" type="int">
+            <column name="MANID" />
+            <generator class="native" />
+        </id>
+        <property name="manName" type="java.lang.String">
+            <column name="MANNAME" />
+        </property>
+        <property name="manSerial" type="java.lang.String">
+            <column name="MANSERIAL" />
+        </property>
+        <many-to-one name="district" class="com.crm.entity.District" fetch="join">
+            <column name="DISTRICT" />
+        </many-to-one>
+        <many-to-one name="sysUser" class="com.crm.entity.SysUser" fetch="join">
+            <column name="SYSUSER" />
+        </many-to-one>
+        <many-to-one name="clientRank" class="com.crm.entity.ClientRank" fetch="join">
+            <column name="CLIENTRANK" />
+        </many-to-one>
+        <property name="manSatisfy" type="int">
+            <column name="MANSATISFY" />
+        </property>
+        <property name="manCredit" type="int">
+            <column name="MANCREDIT" />
+        </property>
+        <property name="manAddr" type="java.lang.String">
+            <column name="MANADDR" />
+        </property>
+        <property name="manZip" type="int">
+            <column name="MANZIP" />
+        </property>
+        <property name="manTel" type="java.lang.String">
+            <column name="MANTEL" />
+        </property>
+        <property name="manFax" type="java.lang.String">
+            <column name="MANFAX" />
+        </property>
+        <property name="manWebsite" type="java.lang.String">
+            <column name="MANWEBSITE" />
+        </property>
+        <property name="manLicenceNo" type="java.lang.String">
+            <column name="MANLICENCENO" />
+        </property>
+        <property name="manChieftain" type="java.lang.String">
+            <column name="MANCHIEFTAIN" />
+        </property>
+        <property name="manBankroll" type="double">
+            <column name="MANBANKROLL" />
+        </property>
+        <property name="manTurnover" type="double">
+            <column name="MANTURNOVER" />
+        </property>
+        <property name="manBrank" type="java.lang.String">
+            <column name="MANBRANK" />
+        </property>
+        <property name="manBrankAccount" type="java.lang.String">
+            <column name="MANBRANKACCOUNT" />
+        </property>
+        <property name="manLocalNo" type="java.lang.String">
+            <column name="MANLOCALNO" />
+        </property>
+        <property name="manNationalNo" type="java.lang.String">
+            <column name="MANNATIONALNO" />
+        </property>
+    </class>
+</hibernate-mapping>

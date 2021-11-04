@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-20 14:23:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.SysUser" table="SYSUSER">
+        <id name="usrId" type="int">
+            <column name="USRID" />
+            <generator class="native" />
+        </id>
+        <property name="usrName" type="java.lang.String">
+            <column name="USRNAME" />
+        </property>
+        <property name="usrPassword" type="java.lang.String">
+            <column name="USRPASSWORD" />
+        </property>
+        <many-to-one name="sysoRole" class="com.crm.entity.SysRole" fetch="join">
+            <column name="SYSOROLE" />
+        </many-to-one>
+        <property name="usrFlag" type="int">
+            <column name="USRFLAG" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-26 11:13:28 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.ClientDevote" table="CLIENTDEVOTE">
+        <id name="manId" type="int">
+            <column name="MANID" />
+            <generator class="assigned" />
+        </id>
+        <property name="manName" type="java.lang.String">
+            <column name="MANNAME" />
+        </property>
+        <property name="totalMoney" type="double">
+            <column name="TOTALMONEY" />
+        </property>
+    </class>
+</hibernate-mapping>

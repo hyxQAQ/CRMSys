@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <!-- 用户业务管理 -->
+  	<package name="sysUser-manage" namespace="/pages" extends="struts-default">
+  		<!-- 登录验证的action -->
+  		<action name="sUser-login" class="SysUserAction" method="login">
+  			<result type="redirect">/pages/main.jsp</result>
+  			<result name="input">/login.jsp</result>
+  		</action>
+  		<!-- 查询的action -->
+  		<action name="sUser-doSearch" class="SysUserAction" method="doSearch">
+  			<result>/pages/~user/user_list.jsp</result>
+  		</action>
+  		<!-- 添加用户前的action -->
+  		<action name="sUser-add" class="SysUserAction" method="add">
+  			<result>/pages/~user/add_user.jsp</result>
+  		</action>
+  		<!--保存用户信息的action -->
+  		<action name="sUser-doAdd" class="SysUserAction" method="doAdd">
+  			<result type="redirectAction" >sUser-doSearch</result>
+  		</action>
+  		<!--修改用户信息前的action -->
+  		<action name="sUser-update" class="SysUserAction" method="update">
+  			<result>/pages/~user/edit_user.jsp</result>
+  		</action>
+  		<!--修改后保存用户信息的action -->
+  		<action name="sUser-doUpdate" class="SysUserAction" method="doUpdate">
+  			<result type="redirectAction" >sUser-doSearch</result>
+  		</action>
+  		<!-- 删除用户信息 -->
+        <action name="sUser-delete" class="SysUserAction" method="delete">
+           <result type="stream">
+        		<param name="contentType">text/html</param>
+            	<param name="inputName">inputStream</param>
+        	</result>
+        </action>
+  	</package>
+
+</struts>

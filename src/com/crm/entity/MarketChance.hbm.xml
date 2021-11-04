@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-20 14:23:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.MarketChance" table="MARKETCHANCE">
+        <id name="chcId" type="int">
+            <column name="CHCID" />
+            <generator class="native" />
+        </id>
+        <property name="chcManName" type="java.lang.String">
+            <column name="CHCMANNAME" />
+        </property>
+        <property name="chcLinkman" type="java.lang.String">
+            <column name="CHCLINKMAN" />
+        </property>
+        <property name="chcSource" type="java.lang.String">
+            <column name="CHCSOURCE" />
+        </property>
+        <property name="chcRate" type="java.lang.String">
+            <column name="CHCRATE" />
+        </property>
+        <property name="chcTel" type="java.lang.String">
+            <column name="CHCTEL" />
+        </property>
+        <many-to-one name="clientRank" class="com.crm.entity.ClientRank" fetch="join">
+            <column name="CLIENTRANK" />
+        </many-to-one>
+        <property name="chcTitle" type="java.lang.String">
+            <column name="CHCTITLE" />
+        </property>
+        <many-to-one name="district" class="com.crm.entity.District" fetch="join">
+            <column name="DISTRICT" />
+        </many-to-one>
+        <property name="chcDesc" type="java.lang.String">
+            <column name="CHCDESC" />
+        </property>
+        <many-to-one name="sysUser" class="com.crm.entity.SysUser" fetch="join">
+            <column name="SYSUSER" />
+        </many-to-one>
+        <property name="chcDate" type="java.util.Date">
+            <column name="CHCDATE" />
+        </property>
+        <property name="createMan" type="int">
+            <column name="CREATEMAN" />
+        </property>
+        <property name="createDate" type="java.util.Date">
+            <column name="CREATEDATE" />
+        </property>
+        <property name="chcStatus" type="java.lang.String">
+            <column name="CHCSTATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

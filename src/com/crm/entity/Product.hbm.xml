@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-22 19:21:48 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.Product" table="PRODUCT">
+        <id name="prodId" type="int">
+            <column name="PRODID" />
+            <generator class="native" />
+        </id>
+        <property name="prodName" type="java.lang.String">
+            <column name="PRODNAME" />
+        </property>
+        <property name="prodType" type="java.lang.String">
+            <column name="PRODTYPE" />
+        </property>
+        <property name="prodBatch" type="java.lang.String">
+            <column name="PRODBATCH" />
+        </property>
+        <property name="prodUnit" type="java.lang.String">
+            <column name="PRODUNIT" />
+        </property>
+        <property name="prodPrice" type="double">
+            <column name="PRODPRICE" />
+        </property>
+        <property name="prodMemo" type="java.lang.String">
+            <column name="PRODMEMO" />
+        </property>
+    </class>
+</hibernate-mapping>

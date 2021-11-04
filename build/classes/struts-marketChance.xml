@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <!-- 销售机会业务管理 -->
+	<package name="marketChance-manage" namespace="/pages" extends="struts-default">
+		<!-- 查询信息的Action -->
+		<action name="mchance-doSearch" class="MarketChanceAction" method="doSearch">
+			<result>/pages/~sale/list.jsp</result>
+		</action>
+		<!-- 添加回显信息的Action -->
+		<action name="mchance-add" class="MarketChanceAction" method="add">
+			<result>/pages/~sale/add.jsp</result>	
+		</action>
+		<!-- 添加信息的Action -->
+		<action name="mchance-doAdd" class="MarketChanceAction" method="doAdd">
+			<result type="redirectAction" >mchance-doSearch</result>	
+		</action>
+		<!-- 修改回显信息的Action -->
+		<action name="mchance-doupdate" class="MarketChanceAction" method="doupdate">
+			<result>/pages/~sale/edit.jsp</result>
+		</action>
+		<!-- 修改信息的Action -->
+		<action name="mchance-update" class="MarketChanceAction" method="update">
+			<result type="redirectAction">mchance-doSearch</result>
+		</action>
+		<!-- 删除功能的Action -->
+  		<action name="mchance-delete" class="MarketChanceAction" method="delete">
+  			<result type="stream"  name="ajax-success">
+  				<param name="contentType">text/html</param>
+            	<param name="inputName">inputStream</param>
+  			</result>
+  		</action>
+  		<!-- 回显指派信息的Action -->
+  		<action name="mchance-dispatch" class="MarketChanceAction" method="dispatch">
+  			<result >/pages/~sale/dispatch.jsp</result>
+  		</action>
+  		<!-- 保存指派信息的Action -->
+  		<action name="mchance-doDispatch" class="MarketChanceAction" method="doDispatch">
+  			<result type="redirectAction" >mchance-doSearch</result>
+  		</action>
+	</package>
+
+</struts>

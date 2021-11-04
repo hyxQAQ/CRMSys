@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-20 14:23:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.Storage" table="STORAGE">
+        <id name="stkId" type="int">
+            <column name="STKID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="product" class="com.crm.entity.Product" fetch="join">
+            <column name="PRODUCT" />
+        </many-to-one>
+        <property name="stkWarehouse" type="java.lang.String">
+            <column name="STKWAREHOUSE" />
+        </property>
+        <property name="stkWare" type="java.lang.String">
+            <column name="STKWARE" />
+        </property>
+        <property name="stkCount" type="int">
+            <column name="STKCOUNT" />
+        </property>
+        <property name="stkMemo" type="java.lang.String">
+            <column name="STKMEMO" />
+        </property>
+    </class>
+</hibernate-mapping>

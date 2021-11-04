@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-3-20 14:23:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.crm.entity.SysRight" table="SYSRIGHT">
+        <id name="rightCode" type="int">
+            <column name="RIGHTCODE" />
+            <generator class="native" />
+        </id>
+        <property name="rightType" type="java.lang.String">
+            <column name="RIGHTTYPE" />
+        </property>
+        <property name="rightText" type="java.lang.String">
+            <column name="RIGHTTEXT" />
+        </property>
+        <property name="rightUrl" type="java.lang.String">
+            <column name="RIGHTURL" />
+        </property>
+        <property name="rightTip" type="java.lang.String">
+            <column name="RIGHTTIP" />
+        </property>
+        <property name="rightNodeType" type="java.lang.String">
+            <column name="RIGHTNODETYPE" />
+        </property>
+    </class>
+</hibernate-mapping>

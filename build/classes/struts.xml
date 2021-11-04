@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.ui.theme" value="simple"/>
+    <constant name="struts.i18n.encoding" value="utf-8" />
+    
+
+  	<!-- ******************************** 此处为包的添加  ******************************** -->
+  	
+  	<!-- 用户业务管理 -->
+  	<include file="struts-sysUser.xml"></include>
+  	<!-- 销售机会业务管理 -->
+  	<include file="struts-marketChance.xml"></include>
+  	<!-- 客户计划业务管理 -->
+  	<include file="struts-clientPlan.xml"></include>
+  	<!-- 客户信息业务管理 -->
+  	<include file="struts-clientManage.xml"></include>
+  	<!-- 联系人业务管理 -->
+  	<include file="struts-clientLinkman.xml"></include>
+  	<!-- 交往记录业务管理 -->
+  	<include file="struts-clientActivity.xml"></include>
+  	<!-- 订单业务管理 -->
+  	<include file="struts-orders.xml"></include>
+  	<!-- 订单明细业务管理 -->
+  	<include file="struts-ordersLine.xml"></include>
+  	<!-- 客户流失业务管理 -->
+  	<include file="struts-clientLost.xml"></include>
+  	<!-- 客户服务业务管理 -->
+  	<include file="struts-clientService.xml"></include>	
+  	<!-- 客户等级业务管理 -->
+  	<include file="struts-clientRank.xml"></include>
+  	<!-- 服务类型业务管理 -->
+	<include file="struts-serviceType.xml"></include>
+	<!-- 地区业务管理 -->
+	<include file="struts-district.xml"></include>
+	<!-- 产品业务管理 -->
+	<include file="struts-product.xml"></include>
+	<!-- 存库业务管理 -->
+	<include file="struts-storage.xml"></include>
+	<!-- 角色业务管理 -->
+	<include file="struts-sysRole.xml"></include>
+	  	
+  	<!-- ************************************************************************** -->
+</struts>

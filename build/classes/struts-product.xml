@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <!-- 产品业务管理 -->
+    <package name="product-manage" namespace="/pages" extends="struts-default">
+        <!-- 查询的action -->
+        <action name="product-doSearch" class="ProductAction" method="doSearch">
+            <result>/pages/~basd/product.jsp</result>
+        </action>
+    </package>
+
+</struts>

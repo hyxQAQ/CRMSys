@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <!-- 联系人业务管理 -->
+    <package name="clientLinkman-manage" namespace="/pages" extends="struts-default">
+
+        <action name="cLinkMan-findLinkMan" class="ClientLinkmanAction" method="findLinkMan">
+            <result >/pages/~cust/cust/linkman.jsp</result>
+        </action>
+        <action name="cLinkMan-doAdd" class="ClientLinkmanAction" method="doAdd">
+        	<result >/pages/~cust/cust/linkman_add.jsp</result>
+        </action>
+        <action name="cLinkMan-add" class="ClientLinkmanAction" method="add">
+        	<result type="chain">cLinkMan-findLinkMan</result>
+        </action>
+        <action name="cLinkMan-doUpdate" class="ClientLinkmanAction" method="doUpdate">
+        	<result >/pages/~cust/cust/linkman_edit.jsp</result>
+        </action>
+        <action name="cLinkMan-update" class="ClientLinkmanAction" method="update">
+        	<result type="chain">cLinkMan-findLinkMan</result>
+        </action>
+        <action name="cLinkMan-delete" class="ClientLinkmanAction" method="delete">
+        	<result type="stream" >
+        		<param name="contentType">text/html</param>
+            	<param name="inputName">inputStream</param>
+        	</result>
+        </action>
+    </package>
+
+
+</struts>
